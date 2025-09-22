@@ -12,6 +12,12 @@
       modules = [
         ./configuration.nix
         inputs.disko.nixosModules.disko
+        # enable experimental features permanently
+        {
+          nix = {
+            settings.experimental-features = [ "nix-command" "flakes" ];
+          };
+        }
       ];
     };
   };
