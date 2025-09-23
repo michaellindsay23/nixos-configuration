@@ -10,7 +10,6 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
   };
   outputs = inputs@{ self, nixpkgs, ... }:
@@ -25,14 +24,12 @@
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
-
-        modules = [ ./hosts/laptop ];
+        modules = [ ./hosts/laptop ./configuration.nix ];
         specialArgs = {
           host = "laptop";
           inherit self inputs username;
         };
       };
-    }
+    };
   };
 }
