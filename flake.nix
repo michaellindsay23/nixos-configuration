@@ -13,41 +13,26 @@
       inputs.home-manager.follows = "home-manager";
     };
   };
-  outputs = inputs@{ self, nixpkgs, disko, zen-browser, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, ... }:
   let
-    system_type = "x86_64-linux";
-  in {
-    homeConfigurations.michael-lindsay = home-manager.lib.homeManagerConfiguration {
-      system = system_type;
-      specialArgs = { inherit inputs; };
-
-      modules = [
-        ./configuration.nix
-
-        inputs.disko.nixosModules.disko
-        
-        #./hyperland.nix
-
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-	  home-manager.users.michael-lindsay.imports = [
-            ./home.nix
-          ];
-          home-manager.extraSpecialArgs = { 
-            inherit inputs;
-            system = system_type;
-          };
-        }
-
-        # enable experimental features permanently
-        {
-          nix = {
-            settings.experimental-features = [ "nix-command" "flakes" ];
-          };
-        }
-      ];
+    username = "michael-lindsay";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
     };
+  in {
+    nixosConfigurations = {
+      laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+
+        modules = [ ./hosts/laptop ];
+        specialArgs = {
+          host = "laptop";
+          inherit self inputs username;
+        };
+      };
+    }
   };
 }
