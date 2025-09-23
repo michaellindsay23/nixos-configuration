@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./hosts/laptop/hardware-configuration.nix
       ./disko-config.nix 
     ];
 

@@ -1,9 +1,7 @@
 # config for zen browser
 { pkgs, inputs, ... }:
 {
-  imports = [ inputs.zen-browser.homeModules.default ];
-
-  programs.zen-browser = {
-    enable = true;
-  };
+  home.packages = (
+    with pkgs; [ inputs.zen-browser.packages."${system}".default ]
+  );
 }

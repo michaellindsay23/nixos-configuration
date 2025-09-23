@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs@{ self, nixpkgs, ... }:
+  outputs = inputs@{ self, nixpkgs, disko, ... }:
   let
     username = "michael-lindsay";
     system = "x86_64-linux";
@@ -24,7 +24,7 @@
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ ./hosts/laptop ./configuration.nix ];
+        modules = [ ./configuration.nix disko.nixosModules.disko ./hosts/laptop ];
         specialArgs = {
           host = "laptop";
           inherit self inputs username;

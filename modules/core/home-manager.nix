@@ -9,8 +9,8 @@
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   
   home-manager = {
-    userUserPackages = true;
-    useGlobalPackages = true;
+    useUserPackages = true;
+    useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports = [ ./../home ];
@@ -27,5 +27,5 @@
     extraGroups = [
       "wheel"
     ];
-  }
+  };
 }

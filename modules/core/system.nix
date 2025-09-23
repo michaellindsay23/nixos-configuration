@@ -14,6 +14,6 @@
     git
   ];
 
-  time.timeZone = "America/New_York"
+  time.timeZone = "America/New_York";
   nixpkgs.config.allowUnfree = true;
 }
