@@ -2,22 +2,22 @@
 {
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.default;
-    portalPackage = inputs.hyprland.${pkgs.system}.xdg-desktop-portal-hyprland;
-  };
+    xwayland.enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  }; 
 
-  xdg.portal = {
+  wayland.windowManager.hyprland = {
     enable = true;
-    xdgOpenUsePortal = true;
-    
-    config = {
-      common.default = [ "gtk" ];
-      hyprland.default = [
-        "gtk"
-        "hyprland"
-      ];
-    };
 
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+#    plugins = [
+#      inputs.hyprland-plugins.packages."{pkgs.system}".borders-plus-plus
+#    ];
+
+#    settings = {
+#      general = with config.colorScheme.colors; {
+#        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
+#        "col.inactivve_border" = "rgba(${base00}ff)";
+#      };
+#    };
   };
 }
