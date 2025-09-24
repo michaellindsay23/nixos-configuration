@@ -6,6 +6,11 @@
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   }; 
 
+  services.greetd = {
+    enable = true;
+    settings.default_session.command = "Hyprland";
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
