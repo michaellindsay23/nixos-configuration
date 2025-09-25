@@ -42,10 +42,7 @@
         modules = [ 
           ./configuration.nix
           disko.nixosModules.disko
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.users.${username} = import ./hosts/laptop;
-          }
+          ./hosts/laptop
         ];
         specialArgs = {
           host = "laptop";
