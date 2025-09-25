@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     waybar
@@ -14,15 +14,16 @@
     systemd.enable = true; 
 
   
-    plugins = [
-      inputs.hyprland-plugins.packages."{pkgs.system}".borders-plus-plus
-    ];
+#    plugins = [
+#      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+#    ];
 
     settings = {
-      general = with config.colorScheme.colors; {
-        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
-        "col.inactivve_border" = "rgba(${base00}ff)";
-      };
+      animations.enable = true;
+#      general = with config.colorScheme.colors; {
+#        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
+#        "col.inactivve_border" = "rgba(${base00}ff)";
+#      };
     };
   };
 }

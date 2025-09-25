@@ -20,7 +20,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
+
   outputs = inputs@{ self, nixpkgs, disko, home-manager, ... }:
   let
     username = "michael-lindsay";
