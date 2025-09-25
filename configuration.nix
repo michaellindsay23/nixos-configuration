@@ -40,8 +40,8 @@
   # };
 
   # Enable the Wayland windowing system and the Plasma desktop
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  #services.displayManager.gdm.enable = true;
+  #services.displayManager.gdm.wayland.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
 

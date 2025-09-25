@@ -5,5 +5,7 @@
     ./system.nix
     ./home-manager.nix
     ./wayland.nix
+    ./greetd.nix
+    ./variables.nix
   ];
 }
