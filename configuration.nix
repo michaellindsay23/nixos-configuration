@@ -44,9 +44,6 @@
   services.displayManager.sddm.wayland.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
-  hardware.graphics.enable = true;
-
-
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -76,7 +73,7 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     curl
     git

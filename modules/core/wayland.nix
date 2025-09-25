@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, username, ... }:
 {
   programs.hyprland = {
     enable = true;
@@ -11,23 +11,8 @@
     settings = {
       default_session = {
         command = "${pkgs.hyprland}/bin/Hyprland";
-        user = ${username};
+        user = "${username}";
       };
     };
-  };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-
-#    plugins = [
-#      inputs.hyprland-plugins.packages."{pkgs.system}".borders-plus-plus
-#    ];
-
-#    settings = {
-#      general = with config.colorScheme.colors; {
-#        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
-#        "col.inactivve_border" = "rgba(${base00}ff)";
-#      };
-#    };
   };
 }
