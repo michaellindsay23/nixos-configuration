@@ -7,6 +7,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     hyprland.url = "github:hyprwm/Hyprland";
 
     hyprland-plugins = {
@@ -27,7 +29,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, disko, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, disko, home-manager, nixos-hardware, ... }:
   let
     username = "michael-lindsay";
     system = "x86_64-linux";
@@ -42,6 +44,7 @@
         modules = [ 
           ./configuration.nix
           disko.nixosModules.disko
+          #nixos-hardware.nixosModules.hp-laptop-14s-dq2024nf
           ./hosts/laptop
         ];
         specialArgs = {

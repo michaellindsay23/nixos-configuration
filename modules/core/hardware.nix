@@ -2,7 +2,11 @@
 {
   boot = {
     kernelModules = [ "nvidia" "nvidia_drm" ];
-    kernelParams = [ "nvidia_drm.modeset=1" ];
+    kernelParams = [ 
+      "nvidia_drm.modeset=1"
+      "nvidia_drm.fbdev=1"
+      "nvidia.NVreg_EnableGpuFirmware=0"
+    ];
   };
 
   services = {
@@ -21,7 +25,7 @@
 
     nvidia= {
       modesetting.enable = true;
-      open = true;
+      open = false;
       powerManagement.enable = true;
     };
   };
