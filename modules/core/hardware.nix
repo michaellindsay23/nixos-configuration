@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 {
-  boot.kernelParams = [ "nvidia_drm.modeset=1" ];
+  boot = {
+    kernelModules = [ "nvidia" "nvidia_drm" ];
+    kernelParams = [ "nvidia_drm.modeset=1" ];
+  };
 
   services = {
     xserver = {
