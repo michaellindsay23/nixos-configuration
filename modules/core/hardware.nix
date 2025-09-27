@@ -1,14 +1,15 @@
 { pkgs, inputs, ... }:
 {
+  boot.kernelParams = [ "nvidia_drm.modeset=1" ];
+
   services = {
     xserver = {
       enable = false;
       videoDrivers = [ "nvidia" ];
-    };
-    
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+      displayManager.gdm = {
+        enable = true;
+        wayland = true;
+      };
     };
   }; 
 
@@ -17,6 +18,11 @@
       enable = true;
       package = 
         inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.mesa;
+    };
+
+    opengl = {
+      driSupport = true;
+      driSupport32Bit = true;
     };
       
     nvidia= {
