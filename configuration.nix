@@ -39,10 +39,10 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  # Enable the Wayland windowing system and the Plasma desktop
-  #services.displayManager.gdm.enable = true;
-  #services.displayManager.gdm.wayland.enable = true;
-  # services.desktopManager.plasma6.enable = true;
+  # Enable the Wayland windowing system
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland.enable = true;
+
 
 
   # Enable CUPS to print documents.
