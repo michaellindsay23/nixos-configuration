@@ -40,8 +40,8 @@
   # };
 
   # Enable the Wayland windowing system
-  services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland.enable = true;
+  #services.displayManager.gdm.enable = true;
+  #services.displayManager.gdm.wayland.enable = true;
 
 
 
