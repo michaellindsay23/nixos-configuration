@@ -1,6 +1,6 @@
 { inputs, pkgs, ...}:
 {
-  imports = [ inputs.cealestia-shell.homeManagerModules."with-cli";  
+  imports = [ inputs.caelestia-shell.packages.x86_64-linux.with-cli ];  
 
   programs.caelestia = {
     enable = true;
@@ -12,7 +12,7 @@
 
     settings = {
       bar.status = {
-        showBattery = false;
+        showBattery = true;
       };
 
       paths.wallpaperDir = "~/Images";

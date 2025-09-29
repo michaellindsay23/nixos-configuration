@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    cealestia-shell = {
+    caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -26,7 +26,6 @@
     self, 
     nixpkgs, 
     home-manager, 
-    nixos-hardware, 
     caelestia-shell, 
     ... 
   }:
@@ -36,6 +35,12 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+
+      overlays = [
+        (final: prev: {
+          xkeyboard-config = prev.xkeyboard_config;
+        })
+      ];
     };
   in {
     nixosConfigurations = {

@@ -37,7 +37,7 @@
        };
 
        exec-once = [
-         "waybar"
+         "caelestia-shell"
        ];
       };
 
