@@ -14,6 +14,7 @@
     wget
     git
     curl
+    lshw
   ];
 
   time.timeZone = "America/New_York";

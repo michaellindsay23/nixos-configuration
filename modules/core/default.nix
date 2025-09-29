@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    ./hardware.nix
+    ./nvidia.nix
     ./system.nix
     ./boot.nix
     ./home-manager.nix
