@@ -37,8 +37,12 @@ in
   hardware = {
     graphics = {
       enable = true;
-      package = 
-        inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.mesa;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+      #package = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.mesa;
     };
 
     nvidia = {
@@ -48,7 +52,7 @@ in
 
       nvidiaSettings = true;
 
-      open = false;
+      open = true;
       powerManagement.enable = false;
 
       prime = {
@@ -64,13 +68,12 @@ in
   };
 
   environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    WLR_RENDERER = "vulkan";
+    #WLR_NO_HARDWARE_CURSORS = "1";
     WLR_DRM_DEVICES = "/dev/dri/card2:/dev/dri/card1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    __GL_GSYNC_ALLOWED = "0";
-    __GL_VRR_ALLOWED = "0";
+    #__GL_GSYNC_ALLOWED = "0";
+    __GL_VRR_ALLOWED = "1";
     GBM_BACKEND = "nvidia-drm";
-    LIBVA_DRIVER_NAME = "nvidia";
+    #LIBVA_DRIVER_NAME = "nvidia";
   };
 }

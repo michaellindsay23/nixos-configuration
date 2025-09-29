@@ -2,6 +2,6 @@
 {
   imports = [
     ./hyprland.nix
-    #./variables.nix
+    ./key_bindings.nix
   ];
 }

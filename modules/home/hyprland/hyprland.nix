@@ -24,10 +24,6 @@
 #    ];
 
     settings = {
-      animations.enable = true;
-      enable_stdout_logging = true;
-      disable_logs = false;
-
       monitor = [
         "eDP-1, 1920x1200@60,0x0,1"
       ];

@@ -1,8 +1,8 @@
 { inputs, pkgs, username, ... }:
 {
-  #environment.systemPackages = with pkgs; [
-  #  egl-wayland
-  #];
+  environment.systemPackages = with pkgs; [
+    egl-wayland
+  ];
 
   #services.xserver.enable = false;
 
