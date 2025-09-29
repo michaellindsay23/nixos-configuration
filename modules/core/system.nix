@@ -10,8 +10,10 @@
   };
 
   environment.systemPackages = with pkgs; [
+    vim
     wget
     git
+    curl
   ];
 
   time.timeZone = "America/New_York";

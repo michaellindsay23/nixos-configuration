@@ -1,6 +1,10 @@
 { inputs, pkgs, username, ... }:
 {
-  services.xserver.enable = false;
+  environment.systemPackages = with pkgs; [
+    egl-wayland
+  ];
+
+  #services.xserver.enable = false;
 
   programs.hyprland = {
     enable = true;

@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }:
-{
+{ 
   boot = {
     kernelModules = [ "nvidia" "nvidia_drm" ];
     kernelParams = [ 
@@ -11,7 +11,8 @@
 
   services = {
     xserver = {
-      enable = false;
+      enable = true;
+      displayManager.startx.enable = true;
       videoDrivers = [ "nvidia" ];
     };
   }; 
@@ -23,10 +24,11 @@
         inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.mesa;
     };
 
-    nvidia= {
+    nvidia = {
       modesetting.enable = true;
       open = false;
       powerManagement.enable = true;
+      nvidiaSettings = true;
     };
   };
 

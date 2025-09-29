@@ -2,10 +2,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #disko = {
+    #  url = "github:nix-community/disko";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -43,7 +43,7 @@
         inherit system;
         modules = [ 
           ./configuration.nix
-          disko.nixosModules.disko
+          #disko.nixosModules.disko
           #nixos-hardware.nixosModules.hp-laptop-14s-dq2024nf
           ./hosts/laptop
         ];
