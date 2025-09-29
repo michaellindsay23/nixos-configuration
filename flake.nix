@@ -2,13 +2,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
-    #disko = {
-    #  url = "github:nix-community/disko";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
-    #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
     hyprland.url = "github:hyprwm/Hyprland";
 
     hyprland-plugins = {
@@ -23,13 +16,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
+    cealestia-shell = {
+      url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, disko, home-manager, nixos-hardware, ... }:
+  outputs = inputs @ { 
+    self, 
+    nixpkgs, 
+    home-manager, 
+    nixos-hardware, 
+    caelestia-shell, 
+    ... 
+  }:
   let
     username = "michael-lindsay";
     system = "x86_64-linux";
@@ -43,8 +43,6 @@
         inherit system;
         modules = [ 
           ./configuration.nix
-          #disko.nixosModules.disko
-          #nixos-hardware.nixosModules.hp-laptop-14s-dq2024nf
           ./hosts/laptop
         ];
         specialArgs = {

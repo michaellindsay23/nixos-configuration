@@ -1,10 +1,15 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, username, ... }:
 {
   nix = {
     settings = {
       experimental-features = [
         "nix-command"
         "flakes"
+      ];
+
+      trusted-users = [
+        "root"
+        "${username}"
       ];
     };
   };
