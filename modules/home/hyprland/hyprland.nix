@@ -2,6 +2,11 @@
 {
   home.packages = with pkgs; [
     waybar
+    kitty
+    brightnessctl
+    wl-clipboard
+    swaybg
+    nwg-look
   ];
 
   wayland.windowManager.hyprland = {
@@ -20,6 +25,25 @@
 
     settings = {
       animations.enable = true;
+      enable_stdout_logging = true;
+      disable_logs = false;
+
+      monitor = [
+        "eDP-1, 1920x1200@60,0x0,1"
+      ];
+
+      input = {
+        kb_layout = "us";
+        touchpad = {
+          natural_scroll = "yes";
+          tap-to-click = "yes";
+       };
+
+       exec-once = [
+         "waybar"
+       ];
+      };
+
 #      general = with config.colorScheme.colors; {
 #        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
 #        "col.inactivve_border" = "rgba(${base00}ff)";

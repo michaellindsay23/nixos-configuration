@@ -27,7 +27,6 @@ in
   services = {
     xserver = {
       enable = true;
-      displayManager.startx.enable = true;
       videoDrivers = [ 
         "modesetting"
         "nvidia" 
@@ -67,10 +66,11 @@ in
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER = "vulkan";
-#    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    WLR_DRM_DEVICES = "/dev/dri/card2:/dev/dri/card1";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
     GBM_BACKEND = "nvidia-drm";
-#    LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
   };
 }
