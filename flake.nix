@@ -16,17 +16,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    caelestia-shell.url = "github:caelestia-dots/shell";
+
+    nixcord.url = "github:kaylorben/nixcord";
   };
 
   outputs = inputs @ { 
     self, 
-    nixpkgs, 
+    nixpkgs,
     home-manager, 
     caelestia-shell, 
+    nixcord,
     ... 
   }:
   let
@@ -35,12 +35,6 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
-
-      overlays = [
-        (final: prev: {
-          xkeyboard-config = prev.xkeyboard_config;
-        })
-      ];
     };
   in {
     nixosConfigurations = {

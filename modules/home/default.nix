@@ -7,5 +7,7 @@
     ./waybar.nix
     ./dev.nix
     ./zen-browser.nix
+    ./discord.nix
+    ./spotify.nix
   ];
 }
