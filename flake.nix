@@ -17,6 +17,7 @@
     };
 
     caelestia-shell.url = "github:caelestia-dots/shell";
+    caelestia-cli.url = "github:caelestia-dots/cli";
 
     nixcord.url = "github:kaylorben/nixcord";
   };
@@ -25,7 +26,8 @@
     self, 
     nixpkgs,
     home-manager, 
-    caelestia-shell, 
+    caelestia-shell,
+    caelestia-cli,
     nixcord,
     ... 
   }:
