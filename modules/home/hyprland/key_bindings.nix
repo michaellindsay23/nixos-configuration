@@ -10,8 +10,10 @@ in
 
       # Programs
       "${mainMod}, Return, exec, kitty"
-      "${mainMod}, Space, exec, fuzzel"
       "${mainMod}, Z, exec, zen"
+
+      # Open caelestia launcher
+      "${mainMod}, Space, global, caelestia:launcher"
 
       # Windows
       "${mainMod}, Q, killactive"

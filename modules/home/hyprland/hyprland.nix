@@ -7,7 +7,6 @@
     wl-clipboard
     swaybg
     nwg-look
-    fuzzel
   ];
 
   wayland.windowManager.hyprland = {
