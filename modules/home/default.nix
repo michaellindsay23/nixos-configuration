@@ -9,5 +9,6 @@
     ./zen-browser.nix
     ./discord.nix
     ./spotify.nix
+    ./vscodium.nix
   ];
 }
