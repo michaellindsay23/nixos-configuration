@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
-  home.packages = [
-    pkgs.vscodium-fhs
+  home.packages = with  pkgs; [
+    vscodium-fhs
   ];
 }
