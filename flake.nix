@@ -20,6 +20,11 @@
     caelestia-cli.url = "github:caelestia-dots/cli";
 
     nixcord.url = "github:kaylorben/nixcord";
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { 
