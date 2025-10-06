@@ -8,16 +8,28 @@
     enable = true;
 
     settings = {
-      # keep vim available
-      vim.vimAlias = false;
+      vim = { 
+        # keep vim available
+        vimAlias = false;
 
-      vim.lsp = {
-        enable = true;
+        theme = {
+          enable = true;
+          name = "gruvbox";
+          style = "dark";
+        };
 
-      };
+        telescope.enable = true;
+        statusline.lualine.enable = true;
+        autocomplete.nvim-cmp.enable = true;
+        
+        lsp.enable = true;
+        treesitter.enable = true;
 
-      vim.treesitter = {
-        enable = true;
+        languages = {
+          nix.enable = true;
+          rust.enable = true;
+          java.enable = true;
+        };
       };
     };
   };
