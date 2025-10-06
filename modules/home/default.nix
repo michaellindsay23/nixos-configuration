@@ -1,14 +1,15 @@
 { ... }:
 {
   imports = [
+    ./caelestia.nix
+    ./dev.nix
+    ./discord.nix
     ./hyprland
     ./kitty.nix
-    ./caelestia.nix
-    ./waybar.nix
-    ./dev.nix
-    ./zen-browser.nix
-    ./discord.nix
+    ./obsidian.nix
     ./spotify.nix
     ./vscodium.nix
+    ./waybar.nix
+    ./zen-browser.nix
   ];
 }

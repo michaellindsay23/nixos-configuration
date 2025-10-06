@@ -9,9 +9,10 @@
 
     
     #languages
-    python312
+    #python312
     #rust
-    jupyter
+    #jupyter
+    #jdk21
     
 
     devenv
