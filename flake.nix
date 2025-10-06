@@ -31,9 +31,10 @@
     self, 
     nixpkgs,
     home-manager, 
-    caelestia-shell,
     caelestia-cli,
+    caelestia-shell,
     nixcord,
+    nvf,
     ... 
   }:
   let

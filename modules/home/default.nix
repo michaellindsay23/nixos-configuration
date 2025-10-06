@@ -6,6 +6,7 @@
     ./discord.nix
     ./hyprland
     ./kitty.nix
+    ./nvf.nix
     ./obsidian.nix
     ./spotify.nix
     ./vscodium.nix
