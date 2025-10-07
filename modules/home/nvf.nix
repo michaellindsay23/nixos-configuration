@@ -16,13 +16,21 @@
           enable = true;
           name = "gruvbox";
           style = "dark";
+          transparent = true;
         };
 
         telescope.enable = true;
         statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;
         
-        lsp.enable = true;
+        lsp = {
+          enable = true;
+        
+          servers = {
+            nixd.enable = true;
+          };
+        };
+
         treesitter.enable = true;
 
         languages = {

@@ -38,7 +38,15 @@
        exec-once = [
          "caelestia-shell"
        ];
-      };
+     };
+
+     general = {
+       gaps_out = 10;
+     };
+
+     decoration = {
+       rounding = 5;
+     };
 
 #      general = with config.colorScheme.colors; {
 #        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";

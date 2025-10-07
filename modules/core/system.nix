@@ -24,7 +24,15 @@
     git
     curl
     lshw
+    upower
+    unzip
+    zip
   ];
+
+  services = {
+    upower.enable = true;
+    power-profiles-daemon.enable = true;
+  };
 
   time.timeZone = "America/New_York";
   nixpkgs.config.allowUnfree = true;

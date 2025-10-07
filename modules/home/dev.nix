@@ -15,6 +15,6 @@
     #jdk21
     
 
-    devenv
+    devbox
   ];
 }
