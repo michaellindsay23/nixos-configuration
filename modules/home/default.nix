@@ -4,13 +4,10 @@
     ./caelestia.nix
     ./dev.nix
     ./discord.nix
+    ./home-packages.nix
     ./hyprland
     ./kitty.nix
     ./nvf.nix
-    ./obsidian.nix
-    ./spotify.nix
-    ./vscodium.nix
-    ./waybar.nix
     ./zen-browser.nix
   ];
 }

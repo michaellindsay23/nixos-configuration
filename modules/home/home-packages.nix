@@ -1,7 +1,9 @@
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    moonlight-qt
     obsidian
-    markdown-oxide
+    spotify
+    vscodium-fhs
   ];
 }
