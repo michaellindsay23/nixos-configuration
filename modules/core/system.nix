@@ -32,7 +32,10 @@
   services = {
     upower.enable = true;
     power-profiles-daemon.enable = true;
+    tailscale.enable = true;
   };
+
+  hardware.bluetooth.enable = true;
 
   time.timeZone = "America/New_York";
   nixpkgs.config.allowUnfree = true;
