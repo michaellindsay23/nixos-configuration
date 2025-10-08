@@ -33,6 +33,7 @@
     upower.enable = true;
     power-profiles-daemon.enable = true;
     tailscale.enable = true;
+    blueman.enable = true;
   };
 
   hardware.bluetooth.enable = true;
