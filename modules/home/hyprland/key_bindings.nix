@@ -55,4 +55,6 @@ in
       "${mainMod}, mouse:273, resizewindow"  
     ];
   };
+
+  wayland.input.touchpad.clickfinger_behavior = true;
 }

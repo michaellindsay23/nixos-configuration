@@ -1,9 +1,5 @@
-{ inputs, programs, ... }:
+{ inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.nvf.homeManagerModules.default
-  ];
-
   programs.nvf = {
     enable = true;
 
@@ -14,7 +10,7 @@
 
         theme = {
           enable = true;
-          name = "gruvbox";
+          name = "dracula";
           style = "dark";
           transparent = true;
         };
@@ -37,6 +33,18 @@
           nix.enable = true;
           rust.enable = true;
           java.enable = true;
+        };
+
+        extraPlugins = {
+          themery = {
+            package = pkgs.vimPlugins.themery-nvim;
+            setup = ''
+              require('themery').setup {
+                themes = {"gruvbox-dark", "shado"},
+                livePreview = true,
+              }
+            '';
+          };
         };
       };
     };

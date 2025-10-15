@@ -7,7 +7,8 @@
     ./home-packages.nix
     ./hyprland
     ./kitty.nix
-    ./nvf.nix
+    ./nixCats.nix
+    ./nvf
     ./zen-browser.nix
   ];
 }

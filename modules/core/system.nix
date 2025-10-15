@@ -18,6 +18,7 @@
     enable = true;
   };
 
+  # terminal packages I find usefull
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -27,6 +28,7 @@
     upower
     unzip
     zip
+    nushell
   ];
 
   services = {
