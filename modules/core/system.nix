@@ -11,6 +11,8 @@
         "root"
         "${username}"
       ];
+
+      download-buffer-size = 524288000; #500 MiB
     };
   };
 
