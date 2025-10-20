@@ -1,8 +1,8 @@
-{ home, pkgs, ... }:
+{ home, inputs, ... }:
 {
   programs.neovim = {
     enable = true;
     vimAlias = false; #keep vim available
-    package = pkgs.nixCats-nvim;
+    package = inputs.nixCats-nvim;
   };
 }

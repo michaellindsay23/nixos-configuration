@@ -27,7 +27,12 @@
       monitor = [
         "eDP-1, 1920x1200@60,0x0,1"
 	"HDMI-A-2, 1920x1080@60,1920x0,1"
-	", preferred, auto, 1"
+	#", preferred, auto, 1"
+      ];
+
+      env = [
+        "GLX_VENDOR_LIBRARY_NAME, nvidia" 
+        "GBM_BACKEND, nvidia-drm"
       ];
 
       input = {
@@ -35,20 +40,20 @@
         touchpad = {
           natural_scroll = "yes";
           tap-to-click = "yes";
-       };
+        };
 
-       exec-once = [
-         "caelestia-shell"
-       ];
-     };
+        exec-once = [
+          "caelestia-shell"
+        ];
+      };
 
-     general = {
-       gaps_out = 10;
-     };
+      general = {
+        gaps_out = 10;
+      };
 
-     decoration = {
-       rounding = 5;
-     };
+      decoration = {
+        rounding = 5;
+      };
 
 #      general = with config.colorScheme.colors; {
 #        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
