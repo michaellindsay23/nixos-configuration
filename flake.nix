@@ -22,6 +22,11 @@
     nixcord.url = "github:kaylorben/nixcord";
 
     nixCats-nvim.url = "github:michaellindsay23/nixCats-config";
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { 
@@ -32,6 +37,7 @@
     caelestia-shell,
     nixcord,
     nixCats-nvim,
+    nvf,
     ... 
   }:
   let
