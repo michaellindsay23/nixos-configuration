@@ -21,7 +21,10 @@
 
     nixcord.url = "github:kaylorben/nixcord";
 
-    nixCats-nvim.url = "github:michaellindsay23/nixCats-config";
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { 
@@ -31,7 +34,7 @@
     caelestia-cli,
     caelestia-shell,
     nixcord,
-    nixCats-nvim,
+    nvf,
     ... 
   }:
   let
@@ -43,7 +46,6 @@
     };
   in {
     nixosConfigurations = {
-      nixpkgs.overlays = inputs.nixCats-config.overlays.default;
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ 
