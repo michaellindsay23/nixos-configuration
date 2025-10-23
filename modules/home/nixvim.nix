@@ -1,4 +1,8 @@
 { inputs, ... }:
 {
-  imports = [ inputs.nixvim.nixVimModule.default ];
+  imports = [
+    inputs.nixvim.nixosModules.nixvim
+  ];
+
+  programs.nixvim.enable = true;
 }
