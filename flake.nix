@@ -21,12 +21,7 @@
 
     nixcord.url = "github:kaylorben/nixcord";
 
-    nvf = {
-      url = "github:NotAShelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixvim.url = "github:michaellindsay23/nixvim-config";
+    nixvim-config.url = "github:michaellindsay23/nixvim-config";
   };
 
   outputs = inputs @ { 
@@ -36,8 +31,7 @@
     caelestia-cli,
     caelestia-shell,
     nixcord,
-    nvf,
-    nixvim,
+    nixvim-config,
     ... 
   }:
   let
@@ -49,17 +43,6 @@
     };
   in {
     nixosConfigurations = {
-      nixpkgs.overlays = [
-        nixvim.overlay
-        (final: prev: {
-          nixvim = prev.nixvim.overrideAttrs (old: {
-            buildInputs = old.buildInputs ++ [
-              prev.vimPlugins.nvim-surround
-            ];
-          });
-        })
-      ];
-
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ 

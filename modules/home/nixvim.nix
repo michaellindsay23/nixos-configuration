@@ -1,8 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.nixvim.nixosModules.nixvim
-  ];
-
-  programs.nixvim.enable = true;
+  home.packages = [ inputs.nixvim-config.packages.${pkgs.system}.default ];
 }
