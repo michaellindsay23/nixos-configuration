@@ -25,6 +25,8 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim.url = "github:michaellindsay23/nixvim-config";
   };
 
   outputs = inputs @ { 
@@ -35,6 +37,7 @@
     caelestia-shell,
     nixcord,
     nvf,
+    nixvim,
     ... 
   }:
   let
