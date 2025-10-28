@@ -1,3 +1,3 @@
 git add .
 nix flake update nixvim-config
-sudo nixos-rebuild switch --flake .#laptop
+sudo nixos-rebuild switch --flake .#$1
