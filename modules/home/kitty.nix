@@ -15,6 +15,6 @@
 
   home.file.".bashrc".text = ''
     caelestia scheme set -n dynamic
-    alias rebuild="sh ~/nixos-configuration/rebuild.sh"
+    alias nrebuild="sh ~/nixos-configuration/rebuild.sh"
   '';
 }
