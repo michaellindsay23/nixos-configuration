@@ -8,6 +8,7 @@
     ./hyprland
     ./kitty.nix
     ./nixvim.nix
+    ./zellij.nix
     ./zen-browser.nix
   ];
 }

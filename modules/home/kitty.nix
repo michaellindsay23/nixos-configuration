@@ -1,7 +1,8 @@
 { inputs, pkgs, config, lib, ... }:
 {
-  home.packages = [
-    pkgs.yazi
+  home.packages = with pkgs; [
+    yazi
+    kitty-themes
   ];
 
   programs.kitty = {
@@ -14,7 +15,12 @@
   };
 
   home.file.".bashrc".text = ''
-    caelestia scheme set -n dynamic
+    #caelestia scheme set -n dynamic
     alias nrebuild="sh ~/nixos-configuration/rebuild.sh"
+
+    # Open zellij on start
+    if [[ -z "$ZELLIJ" ]]; then
+      zellij && exit
+    fi
   '';
 }
