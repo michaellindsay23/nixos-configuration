@@ -1,7 +1,8 @@
 # https://wiki.nixos.org/wiki/starship
 # https://starship.rs/config/
+# https://gist.github.com/s-a-c/0e44dc7766922308924812d4c019b109#file-starship-nix/
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
     starship
@@ -12,13 +13,120 @@
 
     settings = {
       add_newline = true;
-      command_timeout = 1300;
-      scan_timeout = 50;
-      format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status\n$username$hostname$directory";
-      character = {
-        success_symbol = "[](bold green) ";
-        error_symbol = "[✗](bold red) ";
+      #character = {
+      #  success_symbol = "[λ](bold green)";
+      #  error_symbol = "[λ](bold red)";
+      #};
+      format = builtins.concatStringsSep "" [
+        "$username"
+        "$hostname"
+
+        # "$localip"
+        "$shlvl"
+        # "$singularity"
+        "$kubernetes"
+        "$directory"
+        # "$vcsh"
+        # "$fossil_branch"
+        # "$fossil_metrics"
+        "$git_branch"
+        "$git_commit"
+        "$git_state"
+        "$git_metrics"
+        "$git_status"
+        # "$hg_branch"
+        # "$pijul_channel"
+        # "$docker_context"
+        "$package"
+        "$c"
+        "$cmake"
+        # "$cobol"
+        # "$daml"
+        # "$dart"
+        # "$deno"
+        # "$dotnet"
+        "$elixir"
+        # "$elm"
+        "$erlang"
+        # "$fennel"
+        "$gleam"
+        "$golang"
+        # "$guix_shell"
+        "$haskell"
+        # "$haxe"
+        "$helm"
+        # "$java"
+        "$julia"
+        # "$kotlin"
+        # "$gradle"
+        # "$lua"
+        # "$nim"
+        # "$nodejs"
+        "$ocaml"
+        # "$opa"
+        "$perl"
+        # "$php"
+        # "$pulumi"
+        # "$purescript"
+        "$python"
+        # "$quarto"
+        # "$raku"
+        # "$rlang"
+        # "$red"
+        # "$ruby"
+        "$rust"
+        # "$scala"
+        # "$solidity"
+        # "$swift"
+        "$terraform"
+        # "$typst"
+        # "$vlang"
+        # "$vagrant"
+        # "$zig"
+        # "$buf"
+        "$nix_shell"
+        # "$conda"
+        # "$meson"
+        # "$spack"
+        "$memory_usage"
+        "$aws"
+        # "$gcloud"
+        # "$openstack"
+        # "$azure"
+        # "$nats"
+        # "$direnv"
+        # "$env_var"
+        # "$crystal"
+        # "$custom"
+        # "$sudo"
+        "$cmd_duration"
+        # "$line_break"
+        "$jobs"
+        # "$battery"
+        "$time"
+        "$line_break" # added
+        "$status"
+        # "$os"
+        # "$container"
+        # "$shell"
+        "$character"
+      ];
+      git_branch.symbol = "🌱 ";
+      git_commit.tag_disabled = false;
+      git_status = {
+        ahead = ''⇡''${count}'';
+        behind = ''⇣''${count}'';
+        diverged = ''⇕⇡''${ahead_count}⇣''${behind_count}'';
+        staged = "+$count";
       };
+      kubernetes.disabled = false;
+      nix_shell = {
+        format = "via [$symbol$state]($style) ";
+        impure_msg = "ι";
+        pure_msg = "﻿ρ";
+        symbol = "❄️";
+      };
+      time.disabled = false;
     };
   };
 }
