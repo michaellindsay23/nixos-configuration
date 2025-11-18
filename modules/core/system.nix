@@ -30,8 +30,11 @@
     upower
     unzip
     zip
-    nushell
   ];
+
+  programs = {
+    ssh.startAgent = true;
+  };
 
   services = {
     upower.enable = true;

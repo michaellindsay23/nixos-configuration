@@ -18,16 +18,11 @@
 
     systemd.enable = true; 
 
-  
-#    plugins = [
-#      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
-#    ];
-
     settings = {
       monitor = [
         "eDP-1, 1920x1200@60,0x0,1"
-	"HDMI-A-2, 1920x1080@60,1920x0,1"
-	#", preferred, auto, 1"
+	      "HDMI-A-2, 1920x1080@60,1920x0,1"
+	      #", preferred, auto, 1"
       ];
 
       env = [
@@ -55,10 +50,10 @@
         rounding = 5;
       };
 
-#      general = with config.colorScheme.colors; {
-#        "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
-#        "col.inactivve_border" = "rgba(${base00}ff)";
-#      };
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+      };
     };
   };
 }

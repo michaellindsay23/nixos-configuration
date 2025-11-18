@@ -49,7 +49,7 @@
         modules = [ 
           ./configuration.nix
           ./hosts/laptop
-	  ./modules/home/steam.nix
+	        ./modules/home/steam.nix
         ];
         specialArgs = {
           host = "laptop";
