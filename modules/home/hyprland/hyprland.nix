@@ -1,12 +1,11 @@
 { inputs, pkgs, config, ... }:
 {
   home.packages = with pkgs; [
-    waybar
     kitty
     brightnessctl
     wl-clipboard
-    swaybg
-    nwg-look
+    hyprshot
+    satty
   ];
 
   wayland.windowManager.hyprland = {
@@ -21,8 +20,8 @@
     settings = {
       monitor = [
         "eDP-1, 1920x1200@60,0x0,1"
-	      "HDMI-A-2, 1920x1080@60,1920x0,1"
-	      #", preferred, auto, 1"
+	      #"HDMI-A-2, 1920x1080@60,1920x0,1"
+	      #", preferred, auto, 1, mirror, eDP-1"
       ];
 
       env = [
@@ -39,6 +38,7 @@
 
         exec-once = [
           "caelestia-shell"
+          "hyprdynamicmonitors run"
         ];
       };
 
@@ -55,5 +55,9 @@
         preserve_split = true;
       };
     };
+
+    extraConfig = ''
+      source = ~/.config/hypr/monitors.conf
+    '';
   };
 }

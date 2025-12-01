@@ -11,6 +11,7 @@
 
     zen-browser.url = "github:youwen5/zen-browser-flake";
 
+    hyprdynamicmonitors.url = "github:fiffeek/hyprdynamicmonitors";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -33,6 +34,7 @@
     caelestia-shell,
     nixcord,
     nixvim-config,
+    hyprdynamicmonitors,
     ... 
   }:
   let
