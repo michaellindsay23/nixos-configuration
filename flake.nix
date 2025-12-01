@@ -63,7 +63,7 @@
         modules = [
           ./configuration.nix
           ./hosts/laptop-gaming
-	        ./modules/home/gaming/steam.nix
+          ./modules/home/gaming/steam.nix
         ];
         specialArgs = {
           host = "laptop-gaming";
