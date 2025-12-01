@@ -13,8 +13,5 @@
     #rust
     #jupyter
     #jdk21
-    
-
-    devbox
   ];
 }

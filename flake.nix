@@ -51,10 +51,22 @@
         modules = [ 
           ./configuration.nix
           ./hosts/laptop
-	        ./modules/home/steam.nix
         ];
         specialArgs = {
           host = "laptop";
+          inherit self inputs username system;
+        };
+      };
+
+      laptop-gaming = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hosts/laptop-gaming
+	        ./modules/home/gaming/steam.nix
+        ];
+        specialArgs = {
+          host = "laptop-gaming";
           inherit self inputs username system;
         };
       };
