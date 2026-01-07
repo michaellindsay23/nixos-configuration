@@ -70,6 +70,19 @@
           inherit self inputs username system;
         };
       };
+
+      desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hosts/desktop
+          ./modules/home/gaming/steam.nix
+        ];
+        specialArgs = {
+          host = "desktop";
+          inherit self inputs username system;
+        };
+      };
     };
   };
 }
