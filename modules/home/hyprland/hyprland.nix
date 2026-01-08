@@ -56,8 +56,8 @@
       };
     };
 
-    extraConfig = ''
-      source = ~/.config/hypr/monitors.conf
-    '';
+#    extraConfig = ''
+#      source = ~/.config/hypr/monitors.conf
+#    '';
   };
 }
