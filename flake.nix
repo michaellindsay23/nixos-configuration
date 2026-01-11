@@ -24,6 +24,8 @@
     nixcord.url = "github:kaylorben/nixcord";
 
     nixvim-config.url = "github:michaellindsay23/nixvim-config";
+
+    tidalcycles.url = "github:mitchmindtree/tidalcycles.nix";
   };
 
   outputs = inputs @ { 
