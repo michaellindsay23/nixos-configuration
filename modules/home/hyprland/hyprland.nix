@@ -57,7 +57,12 @@
     };
 
     extraConfig = ''
-      source = ~/.config/hypr/monitors.conf
+#      source = ~/.config/hypr/monitors.conf
+
+      device {
+        name=steelseries-steelseries-rival-3
+        sensitivity=-0.6
+      }
     '';
   };
 }
