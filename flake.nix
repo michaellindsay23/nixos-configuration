@@ -24,17 +24,22 @@
     nixcord.url = "github:kaylorben/nixcord";
 
     nixvim-config.url = "github:michaellindsay23/nixvim-config";
+
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
   };
 
   outputs = inputs @ { 
     self, 
     nixpkgs,
-    home-manager, 
-    caelestia-cli,
+    hyprland,
+    zen-browser,
+    hyprdynamicmonitors,
+    home-manager,
     caelestia-shell,
+    caelestia-cli,
     nixcord,
     nixvim-config,
-    hyprdynamicmonitors,
+    aagl,
     ... 
   }:
   let
