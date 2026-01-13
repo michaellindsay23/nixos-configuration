@@ -9,7 +9,6 @@
     ./hyprland
     ./kitty.nix
     ./nixvim.nix
-    ./tidal.nix
     ./starship.nix
     ./zen-browser.nix
   ];
