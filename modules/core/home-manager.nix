@@ -19,11 +19,11 @@
         #else if (host == "desktop") then
         #  [ ../home/default.desktop.nix ]
         else
-          [ ../home ];
+          [ ../home/default.nix ];
 
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
-      home.stateVersion = "26.05";
+      home.stateVersion = "25.11";
       programs.home-manager.enable = true;
     };
   };
