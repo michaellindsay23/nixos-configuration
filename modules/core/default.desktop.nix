@@ -3,6 +3,6 @@
   imports = [
     ./default.nix
     ./amd.nix
-    ../home/gaming
+    ../home/default.desktop.nix
   ];
 }
