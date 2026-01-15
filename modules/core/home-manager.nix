@@ -16,12 +16,14 @@
       imports =
         if (host == "laptop-gaming") then 
           [ ../home/default.laptop-gaming.nix ]
+        #else if (host == "desktop") then
+        #  [ ../home/default.desktop.nix ]
         else
           [ ../home ];
 
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
-      home.stateVersion = "25.05";
+      home.stateVersion = "26.05";
       programs.home-manager.enable = true;
     };
   };

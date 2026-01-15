@@ -2,6 +2,6 @@
 {
   imports = [
     ./default.nix
-    ./gaming
+    #./gaming
   ];
 }
