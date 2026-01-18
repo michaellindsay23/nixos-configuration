@@ -14,9 +14,9 @@
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports =
-        if (host == "laptop-gaming") then 
-          [ ../home/default.laptop-gaming.nix ]
-        else
+        #if (host == "laptop-gaming") then 
+        #  [ ../home/default.laptop-gaming.nix ]
+        #else
           [ ../home ];
 
       home.username = "${username}";

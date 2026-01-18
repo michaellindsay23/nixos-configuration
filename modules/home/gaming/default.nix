@@ -7,6 +7,6 @@
     #./aagl.nix
     ./flatpak.nix
     ./wine.nix
-    ./deadlock.nix
+    #./deadlock.nix
   ];
 }

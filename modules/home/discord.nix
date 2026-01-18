@@ -1,16 +1,6 @@
-{ inputs, programs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  imports = [ 
-    inputs.nixcord.homeModules.nixcord 
+  home.packages = with pkgs; [ 
+    vesktop
   ];
-
-  programs.nixcord = {
-    vesktop.enable = true;
-
-    config = {
-      plugins = {
-        fakeNitro.enable = true;
-      };
-    };
-  };
 }

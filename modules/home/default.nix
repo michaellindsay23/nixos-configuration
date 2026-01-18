@@ -10,6 +10,7 @@
     ./kitty.nix
     ./nixvim.nix
     ./starship.nix
+    ./spotify.nix
     ./zen-browser.nix
   ];
 }

@@ -21,9 +21,9 @@
     caelestia-shell.url = "github:caelestia-dots/shell";
     caelestia-cli.url = "github:caelestia-dots/cli";
 
-    nixcord.url = "github:kaylorben/nixcord";
-
     nixvim-config.url = "github:michaellindsay23/nixvim-config";
+
+    spicetify.url = "github:Gerg-L/spicetify-nix";
 
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
   };
@@ -37,8 +37,8 @@
     home-manager,
     caelestia-shell,
     caelestia-cli,
-    nixcord,
     nixvim-config,
+    spicetify,
     aagl,
     ... 
   }:
@@ -68,7 +68,7 @@
         modules = [
           ./configuration.nix
           ./hosts/laptop-gaming
-          ./modules/home/gaming/steam.nix
+          ./modules/home/gaming
         ];
         specialArgs = {
           host = "laptop-gaming";

@@ -2,9 +2,8 @@
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    obsidian
-    spotify
-    vscodium-fhs
+    #obsidian
+    #vscodium-fhs
     moonlight-qt
   ];
 }
