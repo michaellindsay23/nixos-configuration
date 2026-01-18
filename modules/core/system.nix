@@ -42,6 +42,7 @@
     tailscale.enable = true;
     blueman.enable = true;
     sunshine.enable = true;
+    hardware.openrgb.enable = true;
   };
 
   hardware.bluetooth.enable = true;
