@@ -81,7 +81,7 @@
         modules = [
           ./configuration.nix
           ./hosts/desktop
-          ./modules/home/gaming/steam.nix
+          ./modules/home/gaming
         ];
         specialArgs = {
           host = "desktop";
