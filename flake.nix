@@ -68,7 +68,7 @@
         modules = [
           ./configuration.nix
           ./hosts/laptop-gaming
-          ./modules/home/gaming
+          ./modules/gaming
         ];
         specialArgs = {
           host = "laptop-gaming";
@@ -81,7 +81,7 @@
         modules = [
           ./configuration.nix
           ./hosts/desktop
-          ./modules/home/gaming
+          ./modules/gaming
         ];
         specialArgs = {
           host = "desktop";

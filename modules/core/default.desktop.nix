@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    ./default.nix
     ./amd.nix
+    ./default.nix
   ];
 }
