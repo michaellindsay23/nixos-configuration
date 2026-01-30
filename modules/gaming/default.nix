@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    #./prism.nix
+    ./prism.nix
     #./lutris.nix
     ./steam.nix
     #./aagl.nix
