@@ -19,6 +19,8 @@
     # Set shell theme automatically based on wallpaper
     caelestia scheme set -n dynamic
 
+    fastfetch
+
     fish
   '';
 }

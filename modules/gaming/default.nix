@@ -8,5 +8,6 @@
     ./flatpak.nix
     ./wine.nix
     #./deadlock.nix
+    ./mangohud.nix
   ];
 }
