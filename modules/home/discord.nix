@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [ 
-    vesktop
+    #vesktop
+    discord
+
+    xdg-utils
+    xdg-desktop-portal
   ];
 }
