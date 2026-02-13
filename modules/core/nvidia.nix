@@ -65,6 +65,8 @@ in
          intelBusId = "PCI:0:2:0";
       };
     };
+
+    nvidia-container-toolkit.enable = true;
   };
 
   environment.sessionVariables = {
