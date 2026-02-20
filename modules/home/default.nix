@@ -4,6 +4,7 @@
     ./caelestia.nix
     ./dev.nix
     ./discord.nix
+    #./docker.nix
     ./fish.nix
     ./home-packages.nix
     ./hyprland
