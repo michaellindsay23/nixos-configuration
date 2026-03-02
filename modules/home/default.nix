@@ -12,6 +12,7 @@
     ./nixvim.nix
     ./starship.nix
     ./spotify.nix
+    ./unity.nix
     ./zen-browser.nix
   ];
 }
