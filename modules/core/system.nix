@@ -45,7 +45,10 @@
     hardware.openrgb.enable = true;
   };
 
-  hardware.bluetooth.enable = true;
+  hardware = {
+    bluetooth.enable = true;
+    enableRedistributableFirmware = true;
+  };
 
   time.timeZone = "America/New_York";
   nixpkgs.config.allowUnfree = true;

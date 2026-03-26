@@ -9,9 +9,7 @@
 
     settings = {
       dynamic_background_opacity = true;
-      background_opacity = 0.8;
-
-      
+      background_opacity = 0.8;     
     };
   };
 
