@@ -1,7 +1,7 @@
 { pkgs, config, username, ... }:
 {
   environment.systemPackages = with pkgs; [
-    greetd.tuigreet
+    tuigreet
   ];
 
   services.greetd = {
