@@ -48,6 +48,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
+    firmware = [ pkgs.linux-firmware ];
   };
 
   time.timeZone = "America/New_York";
