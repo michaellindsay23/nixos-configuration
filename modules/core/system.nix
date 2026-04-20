@@ -16,9 +16,16 @@
     };
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.networkmanager = {
     enable = true;
+    wifi.powersave = false;
   };
+
+  boot.extraModprobeConfig = ''
+    options iwlwifi power_save=0
+  '';
 
   # terminal packages I find usefull
   environment.systemPackages = with pkgs; [
@@ -48,6 +55,7 @@
   hardware = {
     bluetooth.enable = true;
     enableRedistributableFirmware = true;
+    enableAllFirmware = true;
     firmware = [ pkgs.linux-firmware ];
   };
 
