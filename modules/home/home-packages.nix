@@ -5,5 +5,6 @@
     #obsidian
     #vscodium-fhs
     moonlight-qt
+    impression
   ];
 }
