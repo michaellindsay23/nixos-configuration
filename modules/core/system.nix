@@ -16,7 +16,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_12; #On an older version to support Nvidia drivers
 
   networking.networkmanager = {
     enable = true;
