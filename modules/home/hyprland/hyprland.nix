@@ -18,51 +18,52 @@
     systemd.enable = true; 
 
     settings = {
-      monitor = [
-        "eDP-1, 1920x1200@60,0x0,1"
+      /*monitor = [
+        "eDP-1, 1920x1200@60, 0x0, 1"
 	      #"HDMI-A-2, 1920x1080@60,1920x0,1"
 	      #", preferred, auto, 1, mirror, eDP-1"
-      ];
+      ];*/
 
-      env = [
-        "GLX_VENDOR_LIBRARY_NAME, nvidia" 
-        "GBM_BACKEND, nvidia-drm"
-      ];
+/*      env = [
+        ''GLX_VENDOR_LIBRARY_NAME, nvidia'' 
+        ''GBM_BACKEND, nvidia-drm''
+      ];*/
 
-      input = {
-        kb_layout = "us";
-        touchpad = {
-          natural_scroll = "yes";
-          tap-to-click = "yes";
+      config = {
+        decoration = {
+          rounding = 5;
         };
 
-        exec-once = [
-          "caelestia-shell"
-          "hyprdynamicmonitors run"
-        ];
-      };
+        dwindle = {
+          preserve_split = true;
+        };
 
-      general = {
-        gaps_out = 10;
-      };
+        general = {
+          gaps_out = 10;
+        };
 
-      decoration = {
-        rounding = 5;
-      };
+        input = {
+          kb_layout = "us";
+          touchpad = {
+            natural_scroll = true;
+            tap_to_click = true;
+          };
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
+          exec-once = [
+            "caelestia-shell"
+            "hyprdynamicmonitors run"
+          ];
+        };
       };
     };
 
-    extraConfig = ''
-#      source = ~/.config/hypr/monitors.conf
+/*    extraConfig = ''
+      source = ~/.config/hypr/monitors.conf
 
       device {
         name=steelseries-steelseries-rival-3
         sensitivity=-0.6
       }
-    '';
+    '';*/
   };
 }
