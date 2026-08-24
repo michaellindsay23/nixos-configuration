@@ -130,11 +130,11 @@
         "quickshell": "quickshell_2"
       },
       "locked": {
-        "lastModified": 1787455880,
-        "narHash": "sha256-JRICTpsYY3rD9CldgbIYWICHp8KDis0I7QafNkRGhac=",
+        "lastModified": 1787499951,
+        "narHash": "sha256-Q4C0BJGVxG5Y+zL4hKI6R+A9I+r95wfbh1YG68dqTr0=",
         "owner": "caelestia-dots",
         "repo": "shell",
-        "rev": "4c69204d8d7b2dac6950b4de9055465229359f55",
+        "rev": "1d0e5a588c61f1d905eba5fe8446ec222d37f50c",
         "type": "github"
       },
       "original": {
@@ -363,11 +363,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1787436444,
-        "narHash": "sha256-iLWbH4BQ7x/x7oGGwlj/OarJjrmuisOFDZgc2rar9tw=",
+        "lastModified": 1787505664,
+        "narHash": "sha256-ds9J1/RBDzgSFtb20+MbXS/v8xA7TLRh7YSnD6cWSgY=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "45a79e5e84136025a5da1de34c9c65fe00cb813e",
+        "rev": "951ab550e7ea050e4b871f99faf87d99c601c44a",
         "type": "github"
       },
       "original": {
@@ -439,11 +439,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787071735,
-        "narHash": "sha256-1DDAvYcJ7q1x4JdhoXU+PTQWxAUcv53gSNmmi9pBVuU=",
+        "lastModified": 1787505272,
+        "narHash": "sha256-QlwOFpistZmkBdIrCBya3ooLOIFL6E3zYRID5LmuNQ8=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "83ce4b2a70d3c1a6ed8dc6db7f1fac17db2215b1",
+        "rev": "2b41ad87ba68226472b8a811c3f580a1eabb10bb",
         "type": "github"
       },
       "original": {
@@ -797,11 +797,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1787204541,
-        "narHash": "sha256-OURZPknrTjQrlNyxPdqzyqmU/81Wes1CUP/Ft1Rv/YI=",
+        "lastModified": 1787414105,
+        "narHash": "sha256-WncT27+3BOkgTaJZLnCsf3LcYf9RXMuR9ONSN4rzQ7s=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5880666fd9eb563038431edb35c2d0aa595884e6",
+        "rev": "a9e6d84f9c2f9012f5fe7d964a7851352300e61a",
         "type": "github"
       },
       "original": {
@@ -887,11 +887,11 @@
         "tidalcycles": "tidalcycles"
       },
       "locked": {
-        "lastModified": 1787377638,
-        "narHash": "sha256-4an2GCVuR8uGUSBzCNrijt8OrJbcvS/c5WSWDD4yHpI=",
+        "lastModified": 1787542594,
+        "narHash": "sha256-XrFj46p2BPv/RDUyLFPVcGWndjXYnQumvVE2DnySIsw=",
         "owner": "michaellindsay23",
         "repo": "nixvim-config",
-        "rev": "100e3a5e9817b2bfe99c86e307ca3bf562db36ed",
+        "rev": "f222fd6496399344379df26436b7475cb1de95a1",
         "type": "github"
       },
       "original": {
