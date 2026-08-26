@@ -60,12 +60,16 @@
   # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.michael-lindsay = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
+  users = {
+    users.michael-lindsay = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+      packages = with pkgs; [
+        tree
+      ];
+    };
+
+    extraGroups.vboxusers.members = [ "michael-lindsay" ];
   };
 
 
@@ -83,14 +87,20 @@
     xorg.lndir
   ];
 
-  virtualisation.docker = {
-    enable = true;
-    daemon.settings = {
-      data-root = "~/Projects/docker/";
+  virtualisation = {
+    virtualbox = {
+      host.enable = true;
     };
-    rootless = {
+
+    docker = {
       enable = true;
-      setSocketVariable = true;
+        daemon.settings = {
+        data-root = "~/Projects/docker/";
+      };
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
   };
 
