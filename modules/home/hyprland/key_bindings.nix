@@ -8,6 +8,7 @@ let
     ];
   };
   exec = cmd: ''hl.dsp.exec_cmd("${cmd}")'';                     # execute
+  global = gl: ''hl.dsp.global("${gl}")'';
   mvws = ws: ''hl.dsp.focus({ workspace = "${ws}" })'';          # move workspace
   mvwd = ws: ''hl.dsp.window.move({ workspace = "${ws}" })'';    # move window
   mvwddr = dr: ''hl.dsp.window.move({ direction = "${dr}" })'';  # move window direction
@@ -25,7 +26,7 @@ in
       (bind "SUPER + Z" (exec "zen"))
 
       # Open caelestia launcher
-      (bind "SUPER + Space" (exec "caelestia:launcher"))
+      (bind "SUPER + Space" (global "caelestia:launcher"))
 
       # Window state
       (bind "SUPER + Q" "hl.dsp.window.close()")
