@@ -8,7 +8,7 @@ let
     ];
   };
   exec = cmd: ''hl.dsp.exec_cmd("${cmd}")'';                     # execute
-  global = gl: ''hl.dsp.global("${gl}")'';
+  global = gl: ''hl.dsp.global("${gl}")'';                       # global
   mvws = ws: ''hl.dsp.focus({ workspace = "${ws}" })'';          # move workspace
   mvwd = ws: ''hl.dsp.window.move({ workspace = "${ws}" })'';    # move window
   mvwddr = dr: ''hl.dsp.window.move({ direction = "${dr}" })'';  # move window direction
