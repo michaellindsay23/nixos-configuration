@@ -9,7 +9,7 @@ in
 
   nix.settings = aagl.nixConfig; # Set up Cachix
   programs.anime-game-launcher.enable = false; # Adds launcher and /etc/hosts rules
-  programs.anime-games-launcher.enable = true;
+  programs.anime-games-launcher.enable = false;
   programs.honkers-railway-launcher.enable = true;
   programs.honkers-launcher.enable = false;
   programs.wavey-launcher.enable = false;

@@ -4,10 +4,10 @@
     ./prism.nix
     #./lutris.nix
     ./steam.nix
-    #./aagl.nix
+    ./aagl.nix
     ./flatpak.nix
     ./wine.nix
-    #./deadlock.nix
+    ./deadlock.nix
     ./mangohud.nix
   ];
 }
