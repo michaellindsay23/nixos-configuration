@@ -1,4 +1,12 @@
 { inputs, pkgs, config, ... }:
+let
+  device = name: config: ''
+    hl.device({
+      name = "${name}",
+      ${config}
+    })
+  '';
+in
 {
   home.packages = with pkgs; [
     kitty
@@ -57,13 +65,6 @@
       };
     };
 
-/*    extraConfig = ''
-      source = ~/.config/hypr/monitors.conf
-
-      device {
-        name=steelseries-steelseries-rival-3
-        sensitivity=-0.6
-      }
-    '';*/
+    extraConfig = (device "steelseries-steelseries-rival-3" "sensitivity=-0.6");
   };
 }
