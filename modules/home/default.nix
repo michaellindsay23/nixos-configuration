@@ -6,6 +6,7 @@
     ./discord.nix
     #./docker.nix
     ./fish.nix
+    ./godot.nix
     ./home-packages.nix
     ./hyprland
     ./kitty.nix
