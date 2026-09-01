@@ -887,11 +887,11 @@
         "tidalcycles": "tidalcycles"
       },
       "locked": {
-        "lastModified": 1788299192,
-        "narHash": "sha256-5SUiywWIO9z8fUAwwHAHyoGvF00gwVR4f7Dg+OYX1/A=",
+        "lastModified": 1788299536,
+        "narHash": "sha256-VNP3OBYUDlE0XyKPtOs69gBR4kmt62btyUqeRS1n+rQ=",
         "owner": "michaellindsay23",
         "repo": "nixvim-config",
-        "rev": "fed5400ce97358fefe5f1a741e75e73b82a48f01",
+        "rev": "fd6f4144ef7d6a4cf9d1aad20c947a3062240a9d",
         "type": "github"
       },
       "original": {
