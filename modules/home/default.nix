@@ -2,6 +2,7 @@
 {
   imports = [
     ./caelestia.nix
+    ./comma.nix
     ./dev.nix
     ./discord.nix
     #./docker.nix

@@ -26,6 +26,9 @@
     spicetify.url = "github:Gerg-L/spicetify-nix";
 
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ { 
@@ -40,6 +43,7 @@
     nixvim-config,
     spicetify,
     aagl,
+    nix-index-database,
     ... 
   }:
   let
@@ -53,7 +57,7 @@
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ 
+        modules = [
           ./configuration.nix
           ./hosts/laptop
         ];
