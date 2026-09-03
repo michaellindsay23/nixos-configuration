@@ -1,11 +1,10 @@
-{pkgs, nix-index-database, ...} :
+{pkgs, inputs, ...} :
 {
-  home.pkgs = with pkgs; [
-    nix-index-database.homeModules.default
+  imports = [
+    inputs.nix-index-database.homeModules.default
   ];
 
   programs.nix-index-database = {
-    enable = true;
     comma.enable = true;
   };
 }
