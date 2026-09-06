@@ -907,11 +907,11 @@
         "tidalcycles": "tidalcycles"
       },
       "locked": {
-        "lastModified": 1788299536,
-        "narHash": "sha256-VNP3OBYUDlE0XyKPtOs69gBR4kmt62btyUqeRS1n+rQ=",
+        "lastModified": 1788659756,
+        "narHash": "sha256-OEIgjF8n/BD5OXoAIxN4efYOAl83MP6yAYz+E9aCrfE=",
         "owner": "michaellindsay23",
         "repo": "nixvim-config",
-        "rev": "fd6f4144ef7d6a4cf9d1aad20c947a3062240a9d",
+        "rev": "1e978e9c74b9f95513c69d959096e94f33fc260c",
         "type": "github"
       },
       "original": {
