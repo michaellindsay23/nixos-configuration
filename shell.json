@@ -61,7 +61,7 @@
             ],
             "criticalLevel": 3
         },
-        "idle": {
+        "comment-idle": {
             "lockBeforeSleep": true,
             "inhibitWhenAudio": true,
             "timeouts": [
