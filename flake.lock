@@ -918,11 +918,11 @@
         "tidalcycles": "tidalcycles"
       },
       "locked": {
-        "lastModified": 1789358885,
-        "narHash": "sha256-+fxjwYUR11sCAqdLF5VhkdqSYPWqmzZnSNt3A+MGgKM=",
+        "lastModified": 1789501401,
+        "narHash": "sha256-WoVNsmVDVHCxjkJwPxMRoeEKcaISsF0PGnci5zyLsVs=",
         "owner": "michaellindsay23",
         "repo": "nixvim-config",
-        "rev": "1e56f347fffa69fddfd4fa817eebcca142cff845",
+        "rev": "61dad8bfe4ff53b46c6ac0e651739bb53b03f2bd",
         "type": "github"
       },
       "original": {
