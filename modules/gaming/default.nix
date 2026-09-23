@@ -9,5 +9,6 @@
     ./wine.nix
     ./deadlock.nix
     ./mangohud.nix
+    ./ryujinx.nix
   ];
 }
