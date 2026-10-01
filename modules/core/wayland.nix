@@ -2,6 +2,9 @@
 {
   environment.systemPackages = with pkgs; [
     egl-wayland
+    xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
   ];
 
   #services.xserver.enable = false;
@@ -18,7 +21,7 @@
     xdgOpenUsePortal = true;
     wlr.enable = true;
     config = {
-      common.default = "*";
+      common.default = [ "*" ];
     };
   }; 
 }

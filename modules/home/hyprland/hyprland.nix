@@ -58,6 +58,7 @@ in
           };
 
           exec-once = [
+            "exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service"
             "caelestia-shell"
             "hyprdynamicmonitors run"
           ];
