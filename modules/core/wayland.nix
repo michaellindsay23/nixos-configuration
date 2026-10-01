@@ -2,9 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     egl-wayland
-    xdg-utils
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
   ];
 
   #services.xserver.enable = false;

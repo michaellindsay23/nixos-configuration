@@ -27,7 +27,7 @@
     options iwlwifi power_save=0
   '';
 
-  # terminal packages I find usefull
+  # terminal packages I find useful
   environment.systemPackages = with pkgs; [
     vim
     wget

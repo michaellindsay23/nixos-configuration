@@ -6,5 +6,6 @@
     ./home-manager.nix
     ./wayland.nix
     ./greetd.nix
+    ./packages.nix
   ];
 }
