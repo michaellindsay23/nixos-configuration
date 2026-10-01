@@ -37,6 +37,7 @@
     upower
     unzip
     zip
+    unrar
   ];
 
   programs = {
