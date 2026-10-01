@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    gpu-screen-recorder
+    simplescreenrecorder
     openshot-qt
   ];
 }
