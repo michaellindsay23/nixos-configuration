@@ -12,6 +12,7 @@
     ./hyprland
     ./kitty.nix
     ./nixvim.nix
+    ./screen-cap.nix
     ./starship.nix
     ./spotify.nix
     ./tidal.nix
