@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    simplescreenrecorder
+    wf-recorder
     openshot-qt
   ];
 }
