@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     wf-recorder
-    openshot-qt
+    shotcut
     slurp
   ];
 }
