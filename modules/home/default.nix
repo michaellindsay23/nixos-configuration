@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./ani-cli.nix
     ./caelestia.nix
     ./comma.nix
     ./dev.nix
