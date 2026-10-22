@@ -2,10 +2,9 @@
 {
   imports = [
     ./prism.nix
-    #./lutris.nix
     ./steam.nix
-    #./aagl.nix
     ./flatpak.nix
+    ./faugus.nix
     ./wine.nix
     ./deadlock.nix
     ./mangohud.nix
