@@ -25,7 +25,10 @@
 
     spicetify.url = "github:Gerg-L/spicetify-nix";
 
-    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    dw-proton-nix = {
+      url = "github:Shochraos/dw-proton-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
@@ -42,7 +45,7 @@
     caelestia-cli,
     nixvim-config,
     spicetify,
-    aagl,
+    dw-proton-nix,
     nix-index-database,
     ... 
   }:
