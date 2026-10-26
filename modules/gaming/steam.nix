@@ -4,7 +4,7 @@
     enable = true;
     extraCompatPackages = [ 
       pkgs.proton-ge-bin 
-      inputs.dw-proton-nix.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton
+      #inputs.dw-proton-nix.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton
     ];
   };
 }
