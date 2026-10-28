@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     # Lsp
     nixd
+    typst
     #python312Packages.python-lsp-server
 
     #formatting
