@@ -16,7 +16,8 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #currently split into default.desktop.nix and default.laptop.nix due to nvidia driver conflicts with the latest driver version
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.networkmanager = {
     enable = true;

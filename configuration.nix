@@ -76,7 +76,7 @@
     git
     fastfetch
     comma
-    xorg.lndir
+    lndir
   ];
 
   virtualisation = {
