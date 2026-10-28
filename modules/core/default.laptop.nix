@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
-  boot.kernelPackages = pkgs.linuxPackages_7_2;
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
 
   imports = [
     ./nvidia.nix
