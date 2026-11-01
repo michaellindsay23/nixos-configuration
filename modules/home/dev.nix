@@ -4,6 +4,7 @@
     # Lsp
     nixd
     typst
+    tdf
     #python312Packages.python-lsp-server
 
     #formatting
